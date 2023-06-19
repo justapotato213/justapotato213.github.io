@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Boostrap-->
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Custom CSS-->
+    <link href="custom.css" rel="stylesheet">
+    <!--Highlight.js-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tony Lin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="ics4u.html">ICS4U</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Content-->
+    <div class="container">
+        <div class="row row-cols-2 row-cols-md-3 g-2">
+            <div class="col">
+                <!--Class card-->
+                <div class="shadow-lg card m-3 box shadow hvr-grow">
+                    <img src="http://www.trytoprogram.com/images/classandobject.png" class="card-img-top" alt="Classes and Objects">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a class="link-dark link-underline-opacity-0 stretched-link" data-bs-toggle="modal"
+                                data-bs-target="#classes">Classes and Objects</a>
+                        </h3>
+                        <!--Buttons aren't needed but expand the footer to look nicer-->
+                        <button type="button" class="btn btn-primary invisible">Go!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!--Inheritance-->
+                <div class="shadow-lg card m-3 box shadow hvr-grow">
+                    <img src="imgs/inheritance.png" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a class="link-dark link-underline-opacity-0 stretched-link" data-bs-toggle="modal"
+                                data-bs-target="#inheritance">Inheritance</a>
+                        </h3>
+                        <button type="button" class="btn btn-primary invisible">Go!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!--File reading and writing-->
+                <div class="shadow-lg card m-3 box shadow hvr-grow">
+                    <img src="https://files.realpython.com/media/Reading-and-Writing-Files-in-Python_Watermarked.0d394921fd90.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a class="link-dark link-underline-opacity-0 stretched-link" data-bs-toggle="modal"
+                                data-bs-target="#file">File Reading and Writing</a>
+                        </h3>
+                        <button type="button" class="btn btn-primary invisible">Go!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Class Modal-->
+    <div class="modal fade" id="classes" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3">Classes and Objects</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="fs-5">
+                                    What are classes?
+                                </h1>
+                                <p>
+                                    A class is a certain data structure that allows the programmer to save code and keep
+                                    the program simpler. It contains data, as well as certain functions, which is common
+                                    across all instances of the class. By doing this, the programmer can quickly reuse
+                                    code built earlier to extend the capabilities of their class, and know exactly what
+                                    the class can or cannot do. This allows for more compact and modular code as classes
+                                    simplify the production process by reusing the code already written. Classes are
+                                    what make up object oriented programming, a it revolves around using classes as the
+                                    main way to write code.
+                                </p>
+                                <h1 class="fs-5">Code Example</h1>
+                                <p>
+                                    Within this code example, we define a class for colour. This class contains
+                                    information such as the pattern of the colours, and the primary and secondary
+                                    colours. It also has a function to return a small description of the colour, which
+                                    is used in the main code to describe the colour.
+                                </p>
+                                <h1 class="fs-5">Constructors</h1>
+                                <p>
+                                    One part of classes is the constructor, which is what is what is used whenever a
+                                    class is created. It runs code that sets up the class correctly, assigning all
+                                    variables, and in some cases generating information needed for the class to function
+                                    properly.
+                                </p>
+                                <h1 class="fs-5">Documentation</h1>
+                                <p>
+                                    In C#, Microsoft recommends using XML style documentation, which you have been
+                                    seeing throughout the code, as well as normal comments. Normal comments are defined
+                                    as in many other languages using //. The programmer can then write the comment,
+                                    helping others understand their code. For XML style documentation, there are tags
+                                    which are used to describe various things. The most common type used is
+                                    &lt;summary&gt; which is used to provide a small summary of what code does. Other
+                                    types that
+                                    are commonly used are &lt;param&gt;, and &lt;returns&gt; which describes parameters
+                                    and the return values of functions. These can be used by other programmers to find
+                                    out how to use the function properly.
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <h1 class="fs-5">Code Example</h1>
+                                <pre><code class="language-cs">using System.Text.Json;
+
+namespace Data_Structures.classes;
+
+/// &lt;summary&gt;
+///     Stores colour information (NON RGB)
+/// &lt;summary&gt;
+public class Colour
+{
+    /// &lt;summary&gt;
+    ///     Class constructor
+    /// &lt;summary&gt;
+    /// &lt;param name="pattern">Pattern of the colours (ex. spotted)&lt;/param&gt;
+    /// &lt;param name="primary">Primary colour &lt;/param&gt;
+    /// &lt;param name="secondary">Secondary colour&lt;/param&gt;
+    public Colour(string pattern, string primary, string secondary)
+    {
+        this.pattern = pattern;
+        this.primary = primary;
+        this.secondary = secondary;
+    }
+
+    /// &lt;summary&gt;
+    ///     Stores the pattern of the colour as a string (ex. spotted)
+    /// &lt;summary&gt;
+    public string pattern { get; set; }
+
+    /// &lt;summary&gt;
+    ///     Stores the primary colour as a string
+    /// &lt;summary&gt;
+    public string primary { get; set; }
+
+    /// &lt;summary&gt;
+    ///     Stores the secondary colour as a string
+    /// &lt;summary&gt;
+    public string secondary { get; set; }
+
+    /// &lt;summary&gt;
+    ///     Gives a description of the colour in a string format
+    /// &lt;summary&gt;
+    /// lt;returns&gt;A string containing the descriptionlt;/returns&gt;
+    public string Description()
+    {
+        if (primary != secondary)
+            return $"{primary}-{secondary} {pattern}";
+        return $"{primary}";
+    }
+
+    /// &lt;summary&gt;
+    ///     Returns the cats information stored as a JSON.
+    /// &lt;summary&gt;
+    /// lt;returns&gt;The cats information stored as a JSON, in a string.lt;/returns&gt;
+    public string ToJson()
+    {
+        return JsonSerializer.Serialize(this);
+    }
+
+    /// &lt;summary&gt;
+    ///     Saves the colour information as a JSON
+    /// &lt;summary&gt;
+    public void SaveColour()
+    {
+        var fileName = @$".\data\colours\{primary}-{secondary}-{pattern}.json";
+        var jsonString = ToJson();
+        File.WriteAllText(fileName, jsonString);
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Inheritance Modal-->
+    <div class="modal fade" id="inheritance" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3">Inheritance</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="fs-5">What is inheritance?</h1>
+                                <p>Inheritance is a concept which builds upon classes, as it uses classes as its base.
+                                    In this case, a class will take variables and functions from another class, and
+                                    extend it with additional information. This allows programmers to first design a
+                                    much broader class, with basic functions that they know they will use a lot, and get
+                                    more and more specific the further they extend the tree. Inhertiance also promotes
+                                    the modularity of code, as it allows programmers to build specific extensions,
+                                    splitting code across different sections. It also improves the maintainability of
+                                    code, as programmers can change the base class (parent) and it will change across
+                                    all the classes which inherit from it. </p>
+                                <h1 class="fs-5">Code Example</h1>
+                                <p>
+                                    Within this code example, we have a dog class, which extends from the base animal
+                                    class. In this case, it adds on a variable called squirrelsChased, and a custom
+                                    constructor which modified the base classes information. This allows the class to
+                                    have custom information that differs from the base class of animal, and allows the
+                                    reuse of code from before.
+                                </p>
+                                <h1 class="fs-5">Documentation</h1>
+                                <p>
+                                    Documentating this does not contain any special properties, and is pretty much the
+                                    same as normal classes. This includes the XML documentation, as well as the normal
+                                    comments within the code itself.    
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <h1 class="fs-5">Code Example</h1>
+                                <pre><code class="language-cs">using System.Text.Json;
+using System.Text.Json.Serialization;
+
+namespace Data_Structures.classes;
+
+/// &lt;summary&gt;
+///     A object that holds the characteristics of a dog, and some functions of a dog
+/// &lt;summary&gt;
+public class Dog : Animal
+{
+    /// &lt;summary&gt;
+    ///     The class constructor
+    /// &lt;summary&gt;
+    public Dog()
+    {
+        guid = Guid.NewGuid();
+        squirrelsChased = 0;
+        skinType = "fur";
+        species = "dog";
+        // random number generator
+        var rnd = new Random();
+
+        string[] breeds =
+        {
+            "German Shepherd", "Bulldog", "Labrador Retriever", "Golden Retriever", "French Bulldog", "Shiba Inu",
+            "Poodle", "Pitbull"
+        };
+
+        string[] sexs = { "Male", "Female" };
+
+        var colours = new List&lt;Colour&gt;();
+        // load colour information from file
+        foreach (var file in Directory.GetFiles(@".\data\colours"))
+        {
+            // load json from file
+            var jsonString = File.ReadAllText(@$".\{file}");
+            // convert to class, and then save to colours list
+            colours.Add(JsonSerializer.Deserialize&lt;Colour&gt;(jsonString)!);
+        }
+
+        // randomly generate stats for dog
+        // get a random name from the user
+        Console.WriteLine("What name would you like your dog?");
+        name = Console.ReadLine()!;
+
+        // choose random breed from list
+        breed = breeds[rnd.Next(breeds.Length)];
+        // choose random colour from list
+        colour = colours[rnd.Next(colours.Count)];
+        // choose random sex
+        sex = sexs[rnd.Next(sexs.Length)];
+
+        // choose random age
+        age = rnd.Next(0, 10);
+        // check if its a puppy
+        if (age == 0)
+        {
+            // custom stats
+            weight = rnd.NextDouble() * 1 + 2;
+            height = rnd.NextDouble() * 5 + 3;
+            length = rnd.NextDouble() * 6 + 4;
+            speed = height * length * 0.05 - weight;
+            // check if its a negative number, if it is set it to 1km/h
+            if (speed &lt;= 0) speed = 1;
+        }
+        else
+        {
+            // custom stats
+            weight = rnd.NextDouble() * 3 + 3;
+            height = rnd.NextDouble() * 10 + 23;
+            length = rnd.NextDouble() * 10 + 50;
+            speed = height * length * 0.05 - weight;
+            // check if its a negative number, if it is set it to 1km/h
+            if (speed &lt;= 0) speed = 1;
+        }
+    }
+
+    /// &lt;summary&gt;
+    ///     The class constructor
+    /// &lt;summary&gt;
+    /// &lt;param name="guid">Guid of the dog&lt;/param&gt;
+    /// &lt;param name="name">Name of the dog&lt;/param&gt;
+    /// &lt;param name="species">Species of the dog&lt;/param&gt;
+    /// &lt;param name="colour">Colour of the dog&lt;/param&gt;
+    /// &lt;param name="breed">Breed of the dog&lt;/param&gt;
+    /// &lt;param name="sex">Sex of the dog&lt;/param&gt;
+    /// &lt;param name="weight">Weight of the dog&lt;/param&gt;
+    /// &lt;param name="height">Height of the dog&lt;/param&gt;
+    /// &lt;param name="speed">Speed of the dog&lt;/param&gt;
+    /// &lt;param name="length">Length of the dog&lt;/param&gt;
+    /// &lt;param name="age">Age of the dog&lt;/param&gt;
+    /// &lt;param name="skinType">Skin type of the dog&lt;/param&gt;
+    /// &lt;param name="squirrelsChased">How many squirrels the dog has chased over its life&lt;/param&gt;
+    [JsonConstructor]
+    public Dog(string name, string species, Colour colour, string breed, string sex, double weight, double height,
+        double speed, double length, int age, string skinType, int squirrelsChased, Guid guid)
+    {
+        this.guid = guid;
+        this.name = name;
+        this.species = species;
+        this.colour = colour;
+        this.breed = breed;
+        this.sex = sex;
+        this.weight = weight;
+        this.height = height;
+        this.speed = speed;
+        this.length = length;
+        this.age = age;
+        this.skinType = skinType;
+        this.squirrelsChased = squirrelsChased;
+    }
+
+
+    /// &lt;summary&gt;
+    ///     How mny squirrels the dog has chased over its lifetime
+    /// &lt;summary&gt;
+    public int squirrelsChased { get; set; }
+
+    /// &lt;summary&gt;
+    ///     Prints the animals sound (bark)
+    /// &lt;summary&gt;
+    public override void AnimalSound()
+    {
+        Console.WriteLine($@"{name} barks at you, and then gives you their toy.");
+    }
+
+    public override void SaveAnimal()
+    {
+        {
+            var fileName = @$".\data\{species}\{guid.ToString()}.json";
+            var jsonString = ToJson();
+            File.WriteAllText(fileName, jsonString);
+        }
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Inheritance Modal-->
+    <div class="modal fade" id="file" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3">File Reading and Writing </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="fs-5">JSON</h1>
+                                <p>
+                                    One of the most common file formats to store information is to use a Javascript
+                                    object notation (JSON) file. This file stores information in the same way that
+                                    Javascript stores objects. In other languages, this would be most commonly known as
+                                    a hashmap or a dictionary, where it stores information in a key, value pair. The
+                                    information here can then be read in different languages, as many languages have a
+                                    similiar data structure built in to store the information. This makes it one of the
+                                    most versatile and useful file formats to store information, as it can be treated as
+                                    a common language between the different programming languages as the information can
+                                    be directly translated to the data structure within the language.
+                                </p>
+                                <h1 class="fs-5">File Reading</h1>
+                                <p>
+                                    In C#, file reading is done using the file library, built into C#, containing many
+                                    methods to read information from a file. Most of the time, this information is
+                                    returned as a string, which contains all the text requested. The data here can be
+                                    then processed by a seperate library, or by code the programmer writes themselves.
+                                </p>
+                                <h1 class="fs-5">File Writing</h1>
+                                <p>Similarly, the same library also deals with file writing. It does not process the
+                                    information given to it into a specific format, but instead will just write it as a
+                                    string into the file. </p>
+
+                                <h1 class="fs-5">Code Example</h1>
+                                <p>Within the code example, we use the built in function to read and write files. For
+                                    reading files, the information was stored within a JSON file, which contained the
+                                    information within a class. First, the program reads this file, and then converts it
+                                    into a string. This string is formatted in JSON, and so can be converted by another
+                                    library into an object within C#, allowing us to manipulate and us it within our
+                                    code. Similarly, we do the same thing to write a file, but in reverse. We first
+                                    convert our class into a JSON object, which is then stored as a string. This string
+                                    is then written raw into a file, with no processing occuring when it writes into the
+                                    file.
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <h1 class="fs-5">Code Example</h1>
+                                <pre><code class="language-cs">// load all default colours
+var directory = @".\data\colours";
+// loop through the files
+foreach (var file in Directory.GetFiles(directory))
+{
+    // load file info as a string
+    var jsonString = File.ReadAllText(@$".\{file}");
+    // convert json to a class, and add to the list of colours
+    colours.Add(JsonSerializer.Deserialize&lt;Colour&gt;(jsonString)!);
+}</code></pre>
+                                <h1 class="fs-5">Code Example</h1>
+                                <pre><code class="language-cs">/// &lt;summary&gt;
+///     Returns person information in a JSON
+/// &lt;/summary&gt;
+/// &lt;returns>Person information in JSON, as a string&lt;/returns&gt;
+public string ToJson()
+{
+    return JsonSerializer.Serialize(this);
+}
+
+/// &lt;summary&gt;
+///     Saves the person information in json, to the "/data/people" folder
+/// &lt;/summary&gt;
+public void SavePerson()
+{
+    var fileName = @".\data\people\player.json";
+    var jsonString = ToJson();
+    File.WriteAllText(fileName, jsonString);
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>

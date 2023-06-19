@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Boostrap-->
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Custom CSS-->
+    <link href="custom.css" rel="stylesheet">
+    <!--Highlight.js-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tony Lin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="ics4u.html">ICS4U</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Content-->
+    <div class="container">
+        <div class="row row-cols-2 row-cols-md-3 g-2">
+            <div class="col">
+                <!--Recursion card-->
+                <div class="shadow-lg card m-3 box shadow hvr-grow">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Fr137.jpg" class="card-img-top" alt="Recursion">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a class="link-dark link-underline-opacity-0 stretched-link" data-bs-toggle="modal"
+                                data-bs-target="#recursion">Recursion</a>
+                        </h3>
+                        <!--Buttons aren't needed but expand the footer to look nicer-->
+                        <button type="button" class="btn btn-primary invisible">Go!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!--Optimization card-->
+                <div class="shadow-lg card m-3 box shadow hvr-grow">
+                    <img src="https://assets-global.website-files.com/62c609e220cfd73d2f4f179b/6383e67fe157e47e722ee736_blog1-2.png" class="card-img-top" alt="optimization">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a class="link-dark link-underline-opacity-0 stretched-link" data-bs-toggle="modal"
+                                data-bs-target="#optimization">Optimization</a>
+                        </h3>
+                        <!--Buttons aren't needed but expand the footer to look nicer-->
+                        <a type="button" class="btn btn-primary stretched-link invisible">Go!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!--Visualization Card-->
+                <div class="shadow-lg card m-3 box shadow hvr-grow">
+                    <img src="https://www.betterup.com/hs-fs/hubfs/image5-2.png?width=1999&name=image5-2.png" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a class="link-dark link-underline-opacity-0 stretched-link" data-bs-toggle="modal"
+                                data-bs-target="#visual">Visualization</a>
+                        </h3>
+                        <a type="button" class="btn btn-primary stretched-link invisible">Go!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Recursion Modal-->
+    <div class="modal fade" id="recursion" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3">Recursion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!--Container to split into 2-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="fs-5">
+                                    What is Recursion?
+                                </h1>
+                                <p>
+                                    At the most basic level, recursion is where a function calls itself, and is
+                                    generally one of the ways used to solve various problems. Common uses include being
+                                    used in algorithms such as binary search, where it will call itself upon smaller and
+                                    smaller arrays, until the element is found. Since it calls itself until a certain
+                                    condition is met, it can be thought of as a complex loop, but it must be used very
+                                    carefully. In my code example, I used recurison to simplify a fraction, by using a
+                                    recursive function.
+                                </p>
+                                <h1 class="fs-5">Common Pitfalls</h1>
+                                <p>Recursion can result in a situation where a piece of code will run infinitely, as it
+                                    is very difficult to predict exactly how and when a recursive loop will end. This is
+                                    a very bad situation, as some types of recursion could end up with a very large
+                                    tree, which can grow quickly. This will cause the program to use a lot of resources
+                                    if left unchecked, leading to situations where the entire computer could be frozen
+                                    from the program, or the program itself crashing due to the unexpected nature of the
+                                    recursive loop. In most languages, there is a set limit as to the depth that a
+                                    recursive function could run at, which avoids the worst case scenario of the program
+                                    eating most of the resources available. This however, should not be relied on as it
+                                    will cause errors within the program. Carefully analyzing any recursive code is
+                                    important, as one must make sure that the function has a set endpoint, and will not
+                                    result in unexpected cases. </p>
+                            </div>
+                            <div class="col-6">
+                                <h1 class="fs-5">Code Example</h1>
+                                <pre><code class="language-py">def fractionSimplifier(numerator : int, denominator : int, factor=1, gcf=1) -> tuple:
+    '''
+    Simplifies improper fractions in O(n) time.
+
+    Parameters 
+    ----------
+    numerator : int
+        The numerator of the fraction.
+    denominator : int
+        The denomintaor of the fraction.
+    factor : int
+        The current factor of the algorithm.
+    gcf : int
+        The greatest common factor found so far.
+    
+    Returns
+    ----------
+    tuple
+        A tuple containing the simplified fraction (numerator, denominator).
+    '''
+    
+    # not inside the table, check if they are divisible by current iteration
+    if numerator % factor == 0 and denominator % factor == 0:
+        gcf = factor
+    # reached the end of possible values, return gcf and add to memoization
+    if factor == numerator or factor == denominator:
+        return (numerator//gcf, denominator//gcf)
+    # otherwise, call itself again
+    return fractionSimplifier(numerator, denominator, factor+1, gcf)</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Recursion Modal-->
+    <div class="modal fade" id="optimization" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3">Optimization</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-7">
+                                <h1 class="fs-5">Memoization</h1>
+                                <p>One way of optimizing recursive loops is to use a memoization table, which is simply
+                                    a table which contains inputs and outputs. This allows the program to map out
+                                    certain inputs and outputs, and so rather than having to run the same expensive
+                                    function again, it can simply lookup the table first and see if it already has an
+                                    entry. This saves processing time, as a table lookup is usually less expensive than
+                                    the code within the recursive algorithm.</p>
+                                <h1 class="fs-5">Code Example</h1>
+                                <p>Within this example there is usage of a memoization table, which is updated by the
+                                    recursive function. When this program runs, the memoization table starts off empty.
+                                    The recursive function will then check if there is an entry for the numerator and
+                                    denominator entered. As the first run is empty, it then has to continue with its
+                                    programming, and call itself recursively until it finds the most simplified version.
+                                    It then updates the table with a tuple, containing the original numerator and
+                                    denominator, and relating it to the simplified fraction. This means that when the
+                                    program next recieves the same fraction, it would use the memoization table, rather
+                                    than rerun the same costly code that it ran before. </p>
+                            </div>
+                            <div class="col-5">
+                                <pre><code>memoization = {}
+def fractionSimplifier(numerator : int, denominator : int, factor=1, gcf=1) -> tuple:
+    '''
+    Simplifies improper fractions in O(n) time.
+
+    Parameters 
+    ----------
+    numerator : int
+        The numerator of the fraction.
+    denominator : int
+        The denomintaor of the fraction.
+    factor : int
+        The current factor of the algorithm.
+    gcf : int
+        The greatest common factor found so far.
+    
+    Returns
+    ----------
+    tuple
+        A tuple containing the simplified fraction (numerator, denominator).
+    '''
+
+    # check if it is inside the memoization table first
+    if (numerator, denominator) in memoization:
+        return memoization[(numerator, denominator)]
+    
+    # not inside the table, check if they are divisible by current iteration
+    if numerator % factor == 0 and denominator % factor == 0:
+        gcf = factor
+    
+    # reached the end of possible values, return gcf and add to memoization
+    if factor == numerator or factor == denominator:
+        memoization[(numerator, denominator)] = (numerator//gcf, denominator//gcf)
+        return (numerator//gcf, denominator//gcf)
+    # otherwise, call itself again
+    return fractionSimplifier(numerator, denominator, factor+1, gcf)
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="visual" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="fs-3">
+                        Visualization
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <h1 class="fs-5">Explanation</h1>
+                            <p>The overall visual shows a user inputting  At the first step, the diagram shows the program checking if it is inside a
+                                dictionary, containing sample caches of previously done calculations. If the program
+                                finds it, the check mark and the arrow represents the data being sent back to the
+                                original question. Since our answer was not in this cache, we run the recursive
+                                algorithm. In this case, I tried to represent the program's internal counters, with
+                                different coloured dots. The green dots represent the current factor, and the blue dots
+                                represent the current greatest common factor (GCF). Each time it runs, we see it
+                                performing a modulus operation of the numerator and denominator against the current
+                                factor, and storing it as the blue counters if they both were divisible. At the end, it
+                                checked that the numerator was the same as the current factor, and therefore ended the
+                                process by dividing both the numerator and denominator by the GCF, giving us our
+                                simplified fraction. It then outputs this simplified fraction, as well as adding it to
+                                the cache.
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <img src="imgs/recursionvisual.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

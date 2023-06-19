@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tony Lin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="ics4u.html">ICS4U</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row row-cols-2 row-cols-md-3 g-2">
+            <div class="col">
+                <!--Algorithms card-->
+                <div class="shadow-lg card m-3 box shadow hvr-grow">
+                    <img src="imgs/algorithms.webp" class="card-img-top" alt="Algorithms">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a class="link-dark link-underline-opacity-0 stretched-link" href="algorithms.html">Algorithms</a>
+                        </h3>
+                        <!--Buttons aren't needed but expand the footer to look nicer-->
+                        <a href="algorithms.html" class="btn btn-primary stretched-link invisible">Go!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!--Recursion card-->
+                <div class="shadow-lg card m-3 box shadow hvr-grow">
+                    <img src="imgs/recursion.png" class="card-img-top" alt="Recursion">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a class="link-dark link-underline-opacity-0 stretched-link" href="recursion.html">Recursion</a>
+                        </h3>
+                        <!--Buttons aren't needed but expand the footer to look nicer-->
+                        <a href="recursion.html" class="btn btn-primary stretched-link invisible">Go!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!--Data Structures card-->
+                <div class="shadow-lg card m-3 box shadow hvr-grow">
+                    <img src="imgs/ds2.png" class="card-img-top" alt="Data Structures">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a class="link-dark link-underline-opacity-0 stretched-link" href="ds.html">Data Structures</a>
+                        </h3>
+                        <!--Buttons aren't needed but expand the footer to look nicer-->
+                        <a href="ds.html" class="btn btn-primary stretched-link invisible">Go!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

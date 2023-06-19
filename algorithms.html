@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Boostrap-->
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Custom CSS-->
+    <link href="custom.css" rel="stylesheet">
+    <!--Highlight.js-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tony Lin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="ics4u.html">ICS4U</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Content-->
+    <div class="container">
+        <div class="row row-cols-2 row-cols-md-2 g-2">
+            <div class="col">
+                <!--Searching Algo card-->
+                <div class="shadow-lg card m-3 box shadow hvr-grow">
+                    <img src="https://classic.csunplugged.org/images/activities/searching-algorithms/searching-algs-cartoon.jpg" class="card-img-top" alt="search">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a class="link-dark link-underline-opacity-0 stretched-link" data-bs-toggle="modal"
+                                data-bs-target="#searchAlgo">Searching Algorithms</a>
+                        </h3>
+                        <!--Buttons aren't needed but expand the footer to look nicer-->
+                        <button type="button" class="btn btn-primary invisible">Go!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!--Sorting Algo card-->
+                <div class="shadow-lg card m-3 box shadow hvr-grow">
+                    <img src="https://panthema.net/2013/sound-of-sorting/thumb.gif" class="card-img-top" alt="sort">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a class="link-dark link-underline-opacity-0 stretched-link" data-bs-toggle="modal"
+                                data-bs-target="#sortAlgo">Sorting Algorithms</a>
+                        </h3>
+                        <!--Buttons aren't needed but expand the footer to look nicer-->
+                        <a href="recursion.html" class="btn btn-primary stretched-link invisible">Go!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Searching Algo Modal-->
+    <div class="modal fade" id="searchAlgo" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3">Searching Algorithms</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!--Container to split into 2-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-7">
+                                <h1 class="fs-5">Linear Search</h1>
+                                <p>In a linear search algorithm, the program goes through all the items in an array and
+                                    check each
+                                    one if it is the correct item one by one. This results in a time complexity of O(n),
+                                    meaning
+                                    that it's time cost increases linearly with the amount of items within an array.
+                                    This algorithm
+                                    does not require the array to be formatted in a specific order, and so can be used
+                                    in almost any
+                                    situation. In the example function, the function returns either the index of the
+                                    item,
+                                    or -1 if it cannot find it within the list. </p>
+                            </div>
+                            <div class="col-5">
+                                <h1 class="fs-5">Code Example</h1>
+                                <pre><code class="language-cs">private static int LinearSearch(double vol, List&lt;Cat&gt; cats)
+{
+    // linear search
+    for (int i = 0; i < cats.Count; i++)
+        {
+            if (cats[i].volume == vol)
+                {
+                    return i;
+                }
+        }
+    return -1;
+} </code></pre>
+                            </div>
+                        </div>
+                        <!--Binary Search-->
+                        <div class="row">
+                            <div class="col-7">
+                                <h1 class="fs-5">Binary Search</h1>
+                                <p>In contrast to a linear search, binary search is much more efficient and therefore
+                                    faster. The way it achieves this efficiency is by using divide and conquer, where a
+                                    program will split a larger problem, into smaller ones. Binary search works via
+                                    via picking a point in the middle of two points (beginning with the start and
+                                    end of the array), and checking whether that item
+                                    is the item we are looking for. If it is not this item, it then checks whether it is
+                                    larger or smaller in terms of value. If it is larger, it then sets the start point
+                                    to the middle of the array. In contrast, if it is smaller, the end point of the
+                                    search becomes the middle of the array. It then picks the middle element between the
+                                    starting point and the ending point, and repeats the process until it finds the
+                                    correct element. This results in an O(log n) algorithm, which is very efficient.
+                                    In the code example for this, we return the items index, or -1, in
+                                    case we could not find the item.</p>
+                            </div>
+                            <div class="col-5">
+                                <h1 class="fs-5">Code Example</h1>
+                                <pre><code class="language-cs">private static int BinarySearch(double vol, List&lt;Cat&gt; cats)
+{
+    int start = 0;
+    int end = cats.Count - 1;
+    int middleOfArray = 0;
+        
+    // binary search
+    while (start <= end)
+    {
+        middleOfArray = (start + end) / 2;
+    
+        if (cats[middleOfArray].volume == vol)
+        {
+            return middleOfArray;
+        }
+        
+        if (cats[middleOfArray].volume < vol)
+        {
+            start = middleOfArray + 1;
+        }
+        else
+        {
+            end = middleOfArray - 1;
+        }
+    }
+    return -1;
+}
+</code></pre>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="fs-5">Comparison</h1>
+                                <p>These two algorithms are some of the most common ones used today, with binary search
+                                    offering the speed needed for high performance applications, while linear search
+                                    provides adaptibilty and simplicity. In terms of speed, the binary search algorithm
+                                    wins, due to its O(log n) performance. This does come with a drawback, as this
+                                    requires the array to be sorted, which could cause the overall time to be much
+                                    higher, depending on the sorting algorithm used. In contrast, the linear search does
+                                    not require the array to be setup in a specific order, and can functional on
+                                    virtually all arrays, making it extremely useful for small datasets, with no
+                                    organization of data. The simplicity of its implementation also makes it easy to use
+                                    and understand, making it popular for beginners as well.</p>
+                            </div>
+                            <div class="col">
+                                <h1 class="fs-5">Other Searching Algorithms</h1>
+                                <p>Other popular sorting algorithms include ternary search, and jump search. Ternary
+                                    search functions similiarly to binary search, but instead of splitting the array in
+                                    half,
+                                    it divides it into 3 parts. It then checks which part of the array the desired
+                                    element is in, and splits that into 3 parts. This repeats until the desired element
+                                    is found. This results in a time complexity of O(log<sub>3</sub>n), but still can
+                                    end up slower than binary search, due to its hidden value. Jump search is also
+                                    another sorting algorithm, which is similiar to linear search. This search functions
+                                    similiarly to linear search, but rather than searching each element 1 by 1, it
+                                    "jumps" over them in an interval. It continues jumping, until it reaches either the
+                                    item, or an item which is larger than the desired item. It then goes back an
+                                    interval, and does a normal linear search until the desired item. This results in a
+                                    time complexity of O(√n), which is faster than linear search, but not as fast as
+                                    other algorithms such as binary search. These algorithms both require a sorted array
+                                    to function, and so also comes with the time cost of a sorting algorithm.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Sorting Algo Modal-->
+    <div class="modal fade" id="sortAlgo" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3">Sorting Algorithms</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-7">
+                                <h1 class="fs-5">Insertion Sort</h1>
+                                <p>Insertion sort functions via looping through the array, and swapping elements into
+                                    the correct position. This by setting an iterator, starting at the first element. It
+                                    then creates another variable (in this case called j), set to the iterator minus
+                                    one. After this, it starts a while loop, where it checks if the item at index j is
+                                    larger than the item at the iterators value. This emans that there is space later on
+                                    in the list for the iterators value, and so the sorting algorithm sets j+1 to be the
+                                    value of j, and decreases j. This continues until it hits a value that is smaller
+                                    than the item we are sorting, or 0, at which point it sets j to be the original
+                                    value. This thereby "inserts" the item into the array. As there is a nested while
+                                    loop, it means that the algorithm runs in O(n<sup>2</sup>) time, which is very slow.
+                                    Despite this, it is still used in certain situations, as it has a very low hidden
+                                    value, making it useful for arrays that are quite small in size.
+                                </p>
+                                <h1 class="fs-5">Insertion Sort Visualization</h1>
+                                <img src="imgs/Insertion-sort-example-300px.gif">
+                            </div>
+                            <div class="col-5">
+                                <h1 class="fs-5">Code Example</h1>
+                                <pre><code class="language-cs">private static List&lt;Cat&gt; InsertionSort(List&lt;Cat&gt; cats)
+{
+    for (int i = 0; i < cats.Count; i++)
+    {
+        Cat cat = cats[i];
+        int j = i - 1;
+        while (j >= 0 && cats[j].volume > cat.volume)
+        {
+            cats[j + 1] = cats[j];
+            j--;
+        }
+        cats[j + 1] = cat;
+    }
+    return cats;
+}</code></pre>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="fs-5">Builtin sort</h1>
+                                <p>In C#, the default searching algorithm uses an introspective sort. This means that it
+                                    uses various sorting alogrithms, depending on various factors. Specifically, it uses
+                                    a combination of insertion sort, heap sort, or quick sort depending on the
+                                    situation. This results in an algorithm with a complexity of O(n log n), making it a
+                                    very efficient sorting algorithm, as it does not suffer from the drawbacks by
+                                    choosing only one algorithm. </p>
+                            </div>
+                            <div class="col-6">
+                                <h1 class="fs-5">Other notable sorts</h1>
+                                <p>Other notable sorting algorithms include Timsort, bubble sort, and bogosort. Timsort
+                                    is the sorting algorithm used in python, and is similiar to introspective sort by
+                                    using different sorting algorithms. Rather than using quicksort and heap sort, it
+                                    uses heap sort and insertion sort only. This results in worst case time complexity
+                                    of O(n log n), which is similiar to the introspective sort used in other languages.
+                                    Bubble sort is another sorting algorithm, which has a very simple implementation. It
+                                    first starts with a while loop, which only ends once the array is fully sorted. It
+                                    then has an inner for loop where it goes through the array from the end, and checks
+                                    whether the item before it is larger. If it is, it then swaps them. This continues
+                                    until there are no swaps, and in that case it will end the sort. Since it uses
+                                    nested loops, its time complexity is O(n<sup>2</sup>), making it one of the slowest
+                                    sorting alogrithms. Finally, bogosort is a sorting algorithm most commonly seen as a
+                                    joke. All the bogosort does is randomize the array, and check whether it is sorted.
+                                    This continues until the array is sorted. Since the "sort" is entirely based on
+                                    randomization, it's time complexity is O(n*n!), which is very, very bad.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
